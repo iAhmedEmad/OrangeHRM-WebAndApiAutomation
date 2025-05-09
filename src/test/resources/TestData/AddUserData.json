@@ -1,0 +1,9 @@
+{
+  "newUser": {
+    "userRole": "Admin",
+    "employeeName": "test",
+    "status": "Enabled",
+    "username": "Ahmed",
+    "password": "Test@123##"
+  }
+}
