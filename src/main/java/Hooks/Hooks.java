@@ -15,14 +15,12 @@ public class Hooks {
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.navigate().to("https://opensource-demo.orangehrmlive.com/");
-        System.out.println("🚀 Driver initialized");
     }
 
     @After
     public void tearDown() {
         if (driver != null) {
             driver.quit();
-            System.out.println("🧹 Driver quit");
         }
     }
     public static WebDriver getDriver() {
