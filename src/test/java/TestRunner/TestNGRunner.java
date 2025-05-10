@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/java/Features",          // Path to your .feature files
-        glue = {"StepDefinition", "Hooks"},                    // Package containing step defs
+        glue = {"StepDefinition", "Hooks"},                    // Package containing step definitions
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports.html",
