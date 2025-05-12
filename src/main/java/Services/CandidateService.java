@@ -21,13 +21,13 @@ public class CandidateService {
     }
 
      // Add Candidate
-    private String setPOSTRequestBody(String firstName, String middleName, String lastName, String email, int contactNumber){
+    private String setPOSTRequestBody(String firstName, String middleName, String lastName, String email, String contactNumber){
         return """
                 {
                 "firstName": "$firstName",
                 "middleName": "$middleName",
                 "lastName": "$lastName",
-                "email": "admin@fdfd.com",
+                "email": "$email",
                 "contactNumber": "$contactNumber",
                 "keywords": "",
                 "comment": "",
@@ -42,7 +42,7 @@ public class CandidateService {
                 .replace("$contactNumber", String.valueOf(contactNumber));
     }
 
-    public Response addNewCandidate(String firstName, String middleName, String lastName, String email, int contactNumber) {
+    public Response addNewCandidate(String firstName, String middleName, String lastName, String email, String contactNumber) {
         Response response = given()
                 .spec(rs)
                 .body(setPOSTRequestBody(firstName, middleName, lastName, email, contactNumber))
