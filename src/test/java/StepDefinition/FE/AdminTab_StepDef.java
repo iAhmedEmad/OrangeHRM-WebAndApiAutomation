@@ -1,4 +1,4 @@
-package StepDefinition;
+package StepDefinition.FE;
 
 import Pages.AddUserFormPage;
 import Pages.AdminTabPage;

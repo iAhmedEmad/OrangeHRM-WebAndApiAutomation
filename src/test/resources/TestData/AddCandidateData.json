@@ -1,0 +1,9 @@
+{
+  "newCandidate": {
+    "firstName": "Ahmed",
+    "middleName": "Emad",
+    "lastName": "Soliman",
+    "email": "apiTest@demo.com",
+    "contactNumber": "12345"
+  }
+}

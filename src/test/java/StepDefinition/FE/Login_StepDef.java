@@ -1,4 +1,4 @@
-package StepDefinition;
+package StepDefinition.FE;
 
 import Utils.JsonFileManager;
 import io.cucumber.java.en.And;

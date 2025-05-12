@@ -1,16 +1,28 @@
-# OrangeHRM-WebAutomation
+# OrangeHRM Automation Test Suite
 
-# Selenium & Cucumber - GUI Test Automation Demo Project
-
-
-## 🧪 Tools & Technologies
-
-- **Java**
-- **Selenium WebDriver**
-- **Cucumber (BDD)**
-- **TestNG**
-- **Maven**
+This project contains automated tests for the [OrangeHRM demo site](https://opensource-demo.orangehrmlive.com/) using:
+- **Selenium WebDriver** for UI (FE) testing
+- **RestAssured** for API (BE) testing
+- **Cucumber** for BDD-style scenarios
+- **TestNG** for test execution
+- **Maven** for dependency and test management
 - **Cucumber HTML Reports**
+
+🧪 Running the Project
+- Option 1: Using Maven
+To execute the full test suite and automatically open the Cucumber HTML report:
+mvn clean verify
+- Option 2: Using TestNG Runner
+Alternatively, you can run tests using the TestNGRunner class
+
+🧪 Features:
+
+✅ Frontend (FE) Testing
+: Add & delete user via UI
+
+✅ Backend (API) Testing
+: Add and delete candidate using "/api/v2/recruitment/candidates" endpoint
+& Extracts session cookie from UI login to authenticate API requests
 
 
 ## Project Design:
@@ -18,7 +30,7 @@
   -  Page classes contains:
       - Locators
       - Actions
-      - Validations (Assertions)
+      - Validations (Assertions) (in FE Cases only)
      
 - Cucumber Feature Files & Step Definition Files
   - Feature Files contains The Test Cases in Gherkin Language (Given, When, Then)
