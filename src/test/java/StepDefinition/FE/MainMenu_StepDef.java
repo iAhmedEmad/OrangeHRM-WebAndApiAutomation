@@ -1,4 +1,4 @@
-package StepDefinition;
+package StepDefinition.FE;
 
 import Pages.MainMenuPage;
 import io.cucumber.java.en.And;

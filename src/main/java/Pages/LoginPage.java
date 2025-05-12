@@ -2,11 +2,13 @@ package Pages;
 
 import Hooks.Hooks;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPage{
 
     WebDriver driver;
+    private static String sessionCookie;
 
     // Constructor \\
     public LoginPage() {
@@ -25,6 +27,14 @@ public class LoginPage{
         enterUserName(userName);
         enterPassword(passWord);
         clickLogin();
+        // After login, extract the session cookie
+        Cookie sessionCookieValue = driver.manage().getCookieNamed("orangehrm");
+        sessionCookie = String.valueOf(sessionCookieValue);
+        if (sessionCookie != null) {
+            System.out.println("Session Cookie Value: " + sessionCookie);
+        } else {
+            System.out.println("Session cookie not found.");
+        }
     }
 
     // Helper Action Methods
@@ -38,6 +48,8 @@ public class LoginPage{
         driver.findElement(loginButton).click();
     }
 
-
+    public static String getSessionCookieValue() {
+        return sessionCookie;
+    }
     // validations \\
 }
