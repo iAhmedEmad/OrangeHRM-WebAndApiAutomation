@@ -55,3 +55,6 @@ the report will automatically open in your default browser — even if some test
 to allow the build to continue and reach the verify phase (where the report is opened)
 
 🖱️ You can also open the report manually by navigating to: target/cucumber-reports.html
+## Test Report Screenshot
+![img.png](img.png)
+![img_1.png](img_1.png)
