@@ -1,10 +1,8 @@
 package StepDefinition.FE;
 
-import Utils.JsonFileManager;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import Pages.LoginPage;
+import Utils.JsonFileManager;
+import io.cucumber.java.en.Given;
 public class Login_StepDef {
 
     String password;
@@ -20,18 +18,6 @@ public class Login_StepDef {
         password = userData.getTestData(userType + ".password");
         loginPage.userLogin(userName,password);
 
-    }
-    @When("user click on Admin tab on the left side menu")
-    public void userClickOnAdminTabOnTheLeftSideMenu() {
-        
-    }
-
-    @And("Get the number of records found")
-    public void getTheNumberOfRecordsFound() {
-    }
-
-    @And("Click on add button")
-    public void clickOnAddButton() {
     }
 
 
